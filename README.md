@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2022?style=flat-square" />
   <a href="https://github.com/hugotomazi/navigation-bar/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/hugotomazi/navigation-bar/CI/master?style=flat-square" /></a>
   <a href="https://www.npmjs.com/package/@hugotomazi/capacitor-navigation-bar"><img src="https://img.shields.io/npm/l/@hugotomazi/capacitor-navigation-bar?style=flat-square" /></a>
 <br>
@@ -15,6 +15,10 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 <a href="#contributors-"><img src="https://img.shields.io/badge/all%20contributors-1-orange?style=flat-square" /></a>
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<br/>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F9VPVZKHK4SZW">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal button">
+</a>
 </p>
 <br/>
 <p align="center">
@@ -23,8 +27,8 @@
 
 ## Maintainers
 
-| Maintainer | GitHub | Social |
-| -----------| -------| -------|
+| Maintainer  | GitHub                                      | Social                                                          |
+| ----------- | ------------------------------------------- | --------------------------------------------------------------- |
 | Hugo Tomazi | [hugotomazi](https://github.com/hugotomazi) | [@hugotomazi](https://br.linkedin.com/in/hugo-tomazi-299034101) |
 
 
@@ -43,16 +47,23 @@ No configuration required for this plugin.
 
 <docgen-index>
 
-* [`show()`](#show)
-* [`hide()`](#hide)
-* [`setColor(...)`](#setcolor)
-* [`setTransparency(...)`](#settransparency)
-* [`getColor()`](#getcolor)
-* [`addListener(NavigationBarPluginEvents.SHOW, ...)`](#addlistenernavigationbarplugineventsshow)
-* [`addListener(NavigationBarPluginEvents.HIDE, ...)`](#addlistenernavigationbarplugineventshide)
-* [`addListener(NavigationBarPluginEvents.COLOR_CHANGE, ...)`](#addlistenernavigationbarplugineventscolor_change)
-* [Interfaces](#interfaces)
-* [Enums](#enums)
+- [Maintainers](#maintainers)
+- [Install](#install)
+- [Configuration](#configuration)
+- [API](#api)
+  - [show()](#show)
+  - [hide()](#hide)
+  - [setColor(...)](#setcolor)
+  - [setTransparency(...)](#settransparency)
+  - [getColor()](#getcolor)
+  - [addListener(...)](#addlistener)
+  - [addListener(...)](#addlistener-1)
+  - [addListener(...)](#addlistener-2)
+  - [Interfaces](#interfaces)
+    - [ColorParameters](#colorparameters)
+    - [PluginListenerHandle](#pluginlistenerhandle)
+  - [Enums](#enums)
+    - [NavigationBarPluginEvents](#navigationbarpluginevents)
 
 </docgen-index>
 
@@ -125,7 +136,7 @@ Gets the current color of the navigation bar in Hexadecimal.
 --------------------
 
 
-### addListener(NavigationBarPluginEvents.SHOW, ...)
+### addListener(...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.SHOW, listenerFunc: () => void) => PluginListenerHandle
@@ -143,7 +154,7 @@ Event fired after navigation bar is displayed
 --------------------
 
 
-### addListener(NavigationBarPluginEvents.HIDE, ...)
+### addListener(...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.HIDE, listenerFunc: () => void) => PluginListenerHandle
@@ -161,7 +172,7 @@ Event fired after navigation bar is hidden
 --------------------
 
 
-### addListener(NavigationBarPluginEvents.COLOR_CHANGE, ...)
+### addListener(...)
 
 ```typescript
 addListener(event: NavigationBarPluginEvents.COLOR_CHANGE, listenerFunc: (returnObject: { color: string; }) => void) => PluginListenerHandle
